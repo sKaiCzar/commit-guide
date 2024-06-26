@@ -1,7 +1,12 @@
 # commit-guide
+
 Prefered commit style for my projects
-`commit_string = "[ <commit_type> ] : <commit_message> "
+`commit_string = "[ <commit_type> ] : <commit_message>"`
+
 ## Types of commit:
+
+The following should be the types of commit:
+
 - setup : barebone setting up default project
 - config : adding config files
 - migration : migration of tech stack
@@ -19,9 +24,17 @@ Prefered commit style for my projects
 - chore : non core logic commits 
 - revert : back tracking to old commit
 - update : errata
-## commit messages:
-- should be clear
-- prefer under 32 characters
-- not a sentence
-- explains the commit
-- peferred in english language (american eng because it has smaller char length for same words).
+
+## Commit messages:
+
+The commit message should:
+
+- be clear
+- be under 32 characters (personal preference)
+- not be a sentence
+- explain the commit
+- be in english language. (preferably american eng because it has smaller char length for same words).
+
+Notes:
+- Prefer git rebase in interactive mode over git pull unless there is an use case for any other command.
+- Prefer `git add --interactive` over `git add .` .
