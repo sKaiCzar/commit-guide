@@ -5,7 +5,7 @@ The following guides explain my git commit process.
 ## Commit Style
 
 Prefered commit style for my projects
-`commit_string = "[ <commit_type> ] : <commit_message>"`.
+`commit_string = "[ <commit_type> ][[optional]!!<commit-warn>!!] : <commit_message>"`.
 Commit_type can be be an array too to better explain a commit, but it is preferred that there is a single instance of commit_type in a commit.
 
 ### Types of commit:
@@ -30,6 +30,17 @@ The following should be the types of commit:
 - revert : back tracking to old commit
 - update : errata
 
+### Commit warns:
+
+There are often instances where (if you follow semantic versioning or not) you introduce a major change. In these cases:
+
+- breaking-change: breaking changes (example react-router-dom ver5 to ver6). Major change in something that will break some following.
+- warning: support warning and other bug inducing warnings
+- dependency: update in dependency
+- spl: some special warnings 
+
+~!~ Please note: The flow of website creation was to be changed hence there was a breaking change introduced in last commit (commit-hash: 04c5fed).
+
 ### Commit messages:
 
 The commit message should:
@@ -46,6 +57,6 @@ For productivity reasons prefer atomic commits, i.e, commits of smallest meaning
 ## Squashing commits
 You can squash commits to a meaningful commit after a sufficienty large period or a development cycle has been completed and scope of previous change has little to no aftermath at the current stage.
 
-Notes:
+~!~ Notes:
 - Prefer git rebase in interactive mode over git pull unless there is an use case for any other command.
 - Prefer `git add --interactive` over `git add .` .
